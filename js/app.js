@@ -3,7 +3,7 @@ function getPin() {
     const pin = Math.round(Math.random() * 10000);
     const pinString = pin + '';
     if (pinString.length == 4) {
-        return pin
+        return pin;
     }
     else {
         console.log('got 3 digite and caling agin', pin);
@@ -36,7 +36,6 @@ function verifyPin() {
     const typedNumbers = document.getElementById('typed-numbers').value;
     const successMassage = document.getElementById('notify-success');
     const failError = document.getElementById('notify-fail');
-
 
     if (pin == typedNumbers) {
         successMassage.style.display = 'block';
