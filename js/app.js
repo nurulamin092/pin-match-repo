@@ -1,12 +1,13 @@
+
 function getPin() {
     const pin = Math.round(Math.random() * 10000);
     const pinString = pin + '';
     if (pinString.length == 4) {
-        return pin;
+        return pin
     }
     else {
-        console.log('got 3 digit and calling agan', pin);
-        return getPin();
+        console.log('got 3 digite and caling agin', pin);
+        getPin();
     }
 
 }
