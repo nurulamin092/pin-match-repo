@@ -30,6 +30,21 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
         const newNumber = previousNumber + number;
         calInput.value = newNumber;
     }
-
-
 });
+function verifyPin() {
+    const pin = document.getElementById('display-pin').value;
+    const typedNumbers = document.getElementById('typed-numbers').value;
+    const successMassage = document.getElementById('notify-success');
+    const failError = document.getElementById('notify-fail');
+
+
+    if (pin == typedNumbers) {
+        successMassage.style.display = 'block';
+        failError.style.display = 'none';
+    }
+    else {
+        failError.style.display = 'block';
+        successMassage.style.display = 'none';
+
+    }
+}
